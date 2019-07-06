@@ -100,7 +100,7 @@
     - 提供feign客户端，dto exception
 - 业务模块层命名为`skycloud-service-xxx`，如`skycloud-service-member`
 - 每个项目必须有 readme.md 文件
-- 数据表命名为：`dl`_`表`，如`dl_user`
+- 数据表命名为：`t`_`表`，如`t_user`
     - 必须有如下字段
     ```
       id           BIGINT AUTO_INCREMENT PRIMARY KEY COMMENT '主键id',
