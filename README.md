@@ -68,9 +68,10 @@
        - 修改generatorConfig.xml 文件
        - 运行PaginationPlugin 生成文件~~
        
-- [代码生成器]()       
+- [代码生成器](https://github.com/xk11961677/skycloud-base/tree/master/skycloud-base-codegen)       
 - 入参 MessageReq<T> 出参MessageRes<T>
-- 业务验证器 [使用方式]()
+- 业务验证器(废弃)[使用方式](https://github.com/xk11961677/framework/tree/master/framework-integrate/framework-integrate-validator)
+- 业务验证器(hibernate-validator)
 
 - service层 接口继承 IService<T> 实现类继承 BaseService<T>
     - 如 OrderService extends IService<Order> 
