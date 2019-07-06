@@ -1,7 +1,9 @@
 ## sky Cloud  Service 项目
 
 ### 项目介绍
-本项目为 skycloud 业务模块,依赖于[skycloud-base](http://code.sky.cn:9090/spring-cloud/skycloud-base)模块。
+本项目为 skycloud 业务模块,依赖于
+[skycloud-base](https://github.com/xk11961677/skycloud-base)
+[framework](https://github.com/xk11961677/framework)
   
 ### 平台目录结构说明
 
@@ -9,8 +11,6 @@
 整体代码目录
 
 ├─skycloud-service----------------------------父项目，公共依赖
-│  │
-│  ├─skycloud-generator-tool-------------------------代码生成工具(废弃)
 │  │
 │  ├─skycloud-service-common-------------------------公共包
 │  │
