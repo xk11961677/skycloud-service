@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.sky.skycloud</groupId>
         <artifactId>skycloud-service</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
 
-    <modelVersion>4.0.0</modelVersion>
     <artifactId>skycloud-service-member</artifactId>
     <packaging>jar</packaging>
     <name>skycloud-service-member</name>
@@ -16,6 +16,23 @@
     <dependencies>
 
         <!-- sky -->
+
+        <!-- service begin -->
+
+        <dependency>
+            <groupId>com.sky.skycloud</groupId>
+            <artifactId>skycloud-service-member-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sky.skycloud</groupId>
+            <artifactId>skycloud-service-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- service end -->
+
         <dependency>
             <groupId>com.sky.skycloud</groupId>
             <artifactId>skycloud-base-consul</artifactId>
@@ -24,17 +41,6 @@
         <dependency>
             <groupId>com.sky.skycloud</groupId>
             <artifactId>skycloud-base-config</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.sky.skycloud</groupId>
-            <artifactId>skycloud-service-member-api</artifactId>
-        </dependency>
-
-
-        <dependency>
-            <groupId>com.sky.skycloud</groupId>
-            <artifactId>skycloud-service-common</artifactId>
         </dependency>
 
         <dependency>
@@ -62,6 +68,13 @@
             <groupId>com.sky.skycloud</groupId>
             <artifactId>skycloud-base-hystrix-client</artifactId>
         </dependency>
+
+
+        <dependency>
+            <groupId>com.sky.skycloud</groupId>
+            <artifactId>skycloud-base-prometheus</artifactId>
+        </dependency>
+
 
         <!-- sky end -->
 
@@ -95,12 +108,20 @@
         </dependency>
 
 
-
         <!-- logstash logback -->
         <dependency>
             <groupId>net.logstash.logback</groupId>
             <artifactId>logstash-logback-encoder</artifactId>
         </dependency>
+
+        <!-- hot deployment -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+            <scope>runtime</scope>
+        </dependency>
+
 
     </dependencies>
 
