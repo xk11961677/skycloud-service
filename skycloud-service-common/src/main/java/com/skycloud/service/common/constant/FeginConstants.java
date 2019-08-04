@@ -25,12 +25,16 @@ package com.skycloud.service.common.constant;
 /**
  * @author
  */
-public class FeginConstant {
+public class FeginConstants {
 
     public static final String PATH = "/api";
 
-    public static final String MEMBER = "member";
+    public static final String CLOUD_BASE = "skycloud-base-";
 
-    public static final String AUTHORIZATION = "authorization";
+    public static final String CLOUD_SERVICE = "skycloud-service-";
+
+    public static final String MEMBER = CLOUD_SERVICE + "member";
+
+    public static final String AUTHORIZATION = CLOUD_BASE + "authorization";
 
 }

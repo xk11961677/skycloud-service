@@ -10,4 +10,4 @@ apollo:
     enabled: true
     eagerLoad:
       enabled: true
-    namespaces: application,redis,job-executor
+    namespaces: application,redis,job-executor,redisson
