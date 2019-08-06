@@ -1,4 +1,7 @@
-## sky Cloud  Service 项目
+## Sky Cloud  Service 项目
+[![Build Status](https://travis-ci.org/xk11961677/skycloud-service.svg?branch=master)](https://travis-ci.org/xk11961677/skycloud-service)
+[![license](https://img.shields.io/badge/license-MIT-ff69b4.svg)](https://mit-license.org/license.html)
+
 
 ### 项目介绍
 本项目为 skycloud 业务模块,依赖于
