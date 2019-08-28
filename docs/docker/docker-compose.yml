@@ -1,0 +1,28 @@
+version: '3'
+services:
+  skycloud-service-account:
+    build:
+      context: ../../
+      dockerfile: docs/docker/account/Dockerfile
+    image: skycloud-service-account
+    environment:
+      - CONFIG_ENV=dev
+      - JAVA_OPTS=
+
+  skycloud-service-member:
+    build:
+      context: ../../
+      dockerfile: docs/docker/member/Dockerfile
+    image: skycloud-service-member
+    environment:
+      - CONFIG_ENV=dev
+      - JAVA_OPTS=
+
+  skycloud-service-order:
+    build:
+      context: ../../
+      dockerfile: docs/docker/order/Dockerfile
+    image: skycloud-service-order
+    environment:
+      - CONFIG_ENV=dev
+      - JAVA_OPTS=

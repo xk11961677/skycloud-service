@@ -115,8 +115,21 @@
     ```
 - 更多规范，参考[阿里巴巴Java开发手册]
 
+### 运维管理页面
 
+http://127.0.0.1:8922
 
+### docker-compose 启动方式(仅为 java项目)
+##### 前提条件 在skycloud-service根目录执行所有脚本
+```
+1. 创建镜像
+docker-compose -f docs/docker/docker-compose.yml build
+
+2. 启动容器
+docker-compose -f docs/docker/docker-compose.yml up -d
+
+```
 ### FAQ
+- 在使用中有任何问题，欢迎反馈
 
 ### 业务架构图
