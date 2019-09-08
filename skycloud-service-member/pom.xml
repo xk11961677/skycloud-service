@@ -45,18 +45,18 @@
 
         <dependency>
             <groupId>com.sky.framework</groupId>
+            <artifactId>framework-integrate-job</artifactId>
+        </dependency>
+
+        <!--<dependency>
+            <groupId>com.sky.framework</groupId>
             <artifactId>framework-integrate-redis</artifactId>
         </dependency>
 
         <dependency>
             <groupId>com.sky.framework</groupId>
-            <artifactId>framework-integrate-job</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.sky.framework</groupId>
             <artifactId>framework-integrate-rocketmq</artifactId>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>com.sky.framework</groupId>

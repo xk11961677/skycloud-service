@@ -23,6 +23,7 @@
 package com.skycloud.service.member.model.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.sky.framework.web.support.BaseEntity;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -37,28 +38,10 @@ import java.util.Date;
  * @date 2019-06-15 15:01:41
  */
 @Data
-@Table(name = "xx_member")
-public class Member implements Serializable {
+@Table(name = "member")
+public class Member extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    /**
-     *
-     */
-    @Column(name = "create_date")
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    private Date createDate;
-    /**
-     *
-     */
-    @Column(name = "modify_date")
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    private Date modifyDate;
     /**
      *
      */
