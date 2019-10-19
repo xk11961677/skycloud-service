@@ -33,7 +33,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = "com.skycloud")
 @EnableFeignClients(basePackages = "com.skycloud")
 @SpringBootApplication
-public class SkyCloudMemberApplication {
+public class MemberApplication {
 
 
     /**
@@ -42,7 +42,7 @@ public class SkyCloudMemberApplication {
      * @param args the input arguments
      */
     public static void main(String[] args) {
-        SpringApplication.run(SkyCloudMemberApplication.class, args);
+        SpringApplication.run(MemberApplication.class, args);
     }
 
 

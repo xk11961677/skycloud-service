@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.skycloud.service.member.model.domain;
+package com.skycloud.service.member.model.po;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.sky.framework.web.support.BaseEntity;

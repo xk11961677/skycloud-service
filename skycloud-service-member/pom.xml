@@ -119,7 +119,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.skycloud.service.member.SkyCloudMemberApplication</mainClass>
+                    <mainClass>com.skycloud.service.member.MemberApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
