@@ -54,10 +54,7 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>com.sky.framework</groupId>
-            <artifactId>framework-web</artifactId>
-        </dependency>
+
 
         <dependency>
             <groupId>com.sky.skycloud</groupId>

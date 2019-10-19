@@ -34,13 +34,24 @@
         <!-- service end -->
 
         <dependency>
-            <groupId>com.sky.skycloud</groupId>
-            <artifactId>skycloud-base-consul</artifactId>
+            <groupId>com.sky.framework</groupId>
+            <artifactId>framework-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>framework-dao-mybatis</artifactId>
+                    <groupId>com.sky.framework</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sky.framework</groupId>
+            <artifactId>framework-dao-mybatis-plus</artifactId>
         </dependency>
 
         <dependency>
             <groupId>com.sky.skycloud</groupId>
-            <artifactId>skycloud-base-config</artifactId>
+            <artifactId>skycloud-base-nacos</artifactId>
         </dependency>
 
         <dependency>

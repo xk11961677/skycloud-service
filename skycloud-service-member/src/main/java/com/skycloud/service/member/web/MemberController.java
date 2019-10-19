@@ -22,15 +22,20 @@
  */
 package com.skycloud.service.member.web;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sky.framework.common.LogUtils;
 import com.sky.framework.model.dto.MessageRes;
 import com.sky.framework.model.util.UserContextHolder;
 import com.sky.framework.web.support.BaseController;
 import com.skycloud.service.member.api.model.dto.CustomLoginDto;
+import com.skycloud.service.member.model.po.Codegen;
+import com.skycloud.service.member.service.CodegenService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -49,6 +54,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class MemberController extends BaseController {
 
 
+    @Autowired
+    private CodegenService codegenService;
+
     @ApiOperation(httpMethod = "POST", value = "获取用户信息")
     @PostMapping("/getUser")
     public MessageRes<CustomLoginDto> getUser() {
@@ -58,6 +66,20 @@ public class MemberController extends BaseController {
         CustomLoginDto customLoginDto = new CustomLoginDto();
         customLoginDto.setLoginName("123456");
         return MessageRes.success(customLoginDto);
+    }
+
+
+    /**
+     * 此代码用于测试mybatis-plus是否集成成功
+     *
+     * @return
+     */
+    @ApiOperation(httpMethod = "POST", value = "获取代码生成器表")
+    @RequestMapping("/getCodegen")
+    public MessageRes<IPage<Codegen>> getCodegen() {
+        IPage<Codegen> page = new Page();
+        IPage<Codegen> result = codegenService.page(page);
+        return MessageRes.success(result);
     }
 
 }
