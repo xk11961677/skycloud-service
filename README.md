@@ -79,10 +79,10 @@
 - service层 接口继承 IService<T> 实现类继承 BaseService<T>
     - 如 OrderService extends IService<Order> 
     - 如 OrderServiceImpl extends BaseService<Order> implements OrderService
-    - 分页代码如下 Pagination 分页类 OrderReqDto继承BaseQueryPageRequestDto ,ModelMapper 实体转换工具
+    - 分页代码如下 Pagination 分页类 OrderReqDTO继承BaseQueryPageRequestDTO ,ModelMapper 实体转换工具
     ```
     @Override
-    public Pagination queryOrderListWithPage(OrderReqDto orderPageQuery) {
+    public Pagination queryOrderListWithPage(OrderReqDTO orderPageQuery) {
         PageHelper.startPage(orderPageQuery.getPageNum(), orderPageQuery.getPageSize());
         List<Order> orderList = OrderMapper.selectByUserId(orderPageQuery.getUserId());
         Type targetListType = new TypeToken<List<OrderVo>>() {}.getType();
@@ -97,7 +97,7 @@
     - MEMBER160001(160001, "您验证次数过多，请1小时后重试!")
     
 - 区分domain、dto、vo ，不要把po中的所有字段都返回给前端。 前端需要什么字段，就返回什么字段
-    - DTO 分页继承 BaseQueryPageRequestDto
+    - DTO 分页继承 BaseQueryPageRequestDTO
  
 - 业务模块接口层命名为`skycloud-service-xxx-api`，如`skycloud-service-member-api` 
     - 提供feign客户端，dto exception
