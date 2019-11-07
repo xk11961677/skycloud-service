@@ -28,7 +28,7 @@ import com.sky.framework.common.LogUtils;
 import com.sky.framework.model.dto.MessageRes;
 import com.sky.framework.model.util.UserContextHolder;
 import com.sky.framework.web.support.BaseController;
-import com.skycloud.service.member.api.model.dto.CustomLoginDto;
+import com.skycloud.service.member.api.model.dto.CustomLoginDTO;
 import com.skycloud.service.member.model.po.Codegen;
 import com.skycloud.service.member.service.CodegenService;
 import io.swagger.annotations.Api;
@@ -59,11 +59,11 @@ public class MemberController extends BaseController {
 
     @ApiOperation(httpMethod = "POST", value = "获取用户信息")
     @PostMapping("/getUser")
-    public MessageRes<CustomLoginDto> getUser() {
+    public MessageRes<CustomLoginDTO> getUser() {
         Long userId = UserContextHolder.getInstance().getUserId();
         String channel = UserContextHolder.getInstance().getChannel();
         LogUtils.info(log, "getUser info ");
-        CustomLoginDto customLoginDto = new CustomLoginDto();
+        CustomLoginDTO customLoginDto = new CustomLoginDTO();
         customLoginDto.setLoginName("123456");
         return MessageRes.success(customLoginDto);
     }

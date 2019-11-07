@@ -25,7 +25,7 @@ package com.skycloud.service.member.web.rpc;
 import com.sky.framework.common.LogUtils;
 import com.sky.framework.model.dto.MessageRes;
 import com.sky.framework.web.support.BaseController;
-import com.skycloud.service.member.api.model.dto.CustomLoginDto;
+import com.skycloud.service.member.api.model.dto.CustomLoginDTO;
 import com.skycloud.service.member.api.service.AdUserFeignApi;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -45,7 +45,7 @@ public class AdUserFeignClient extends BaseController implements AdUserFeignApi 
 
     @ApiOperation(httpMethod = "POST", value = "用户登录")
     @Override
-    public MessageRes<CustomLoginDto> login(@RequestBody CustomLoginDto customLoginDto) {
+    public MessageRes<CustomLoginDTO> login(@RequestBody CustomLoginDTO customLoginDto) {
         LogUtils.info(log, "login customLoginDto:{}", customLoginDto);
 
         return MessageRes.success(customLoginDto);

@@ -23,7 +23,7 @@
 package com.skycloud.service.member.handler;
 
 import com.sky.framework.job.handler.BeanJobHandler;
-import com.skycloud.service.member.api.model.dto.CustomLoginDto;
+import com.skycloud.service.member.api.model.dto.CustomLoginDTO;
 import com.xxl.job.core.handler.annotation.JobHandler;
 import org.springframework.stereotype.Component;
 
@@ -32,12 +32,12 @@ import org.springframework.stereotype.Component;
  */
 @JobHandler("MemberDemoHandler")
 @Component
-public class DemoHandler extends BeanJobHandler<CustomLoginDto> {
+public class DemoHandler extends BeanJobHandler<CustomLoginDTO> {
 
     @Override
-    public CustomLoginDto exec(String param) {
+    public CustomLoginDTO exec(String param) {
         System.out.println("-----------" + param);
-        CustomLoginDto customLoginDto = new CustomLoginDto();
+        CustomLoginDTO customLoginDto = new CustomLoginDTO();
         customLoginDto.setLoginName("123456");
         return customLoginDto;
     }

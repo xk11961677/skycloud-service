@@ -31,7 +31,7 @@ import lombok.Data;
  */
 @Data
 @ApiModel("会员登录CustomLoginDto")
-public class CustomLoginDto {
+public class CustomLoginDTO {
 
     /**
      * 手机号或用户名
