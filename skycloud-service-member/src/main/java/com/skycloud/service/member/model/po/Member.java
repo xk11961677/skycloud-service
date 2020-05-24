@@ -23,7 +23,7 @@
 package com.skycloud.service.member.model.po;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.sky.framework.web.support.BaseEntity;
+import com.sky.framework.model.entity.BaseEntity;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 

@@ -50,7 +50,7 @@ public class MemberException extends BusinessException {
 	 * @param msgFormat the msg format
 	 * @param args      the args
 	 */
-	public MemberException(int code, String msgFormat, Object... args) {
+	public MemberException(String code, String msgFormat, Object... args) {
 		super(code, msgFormat, args);
 	}
 
@@ -60,7 +60,7 @@ public class MemberException extends BusinessException {
 	 * @param code the code
 	 * @param msg  the msg
 	 */
-	public MemberException(int code, String msg) {
+	public MemberException(String code, String msg) {
 		super(code, msg);
 	}
 
